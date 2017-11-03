@@ -1,0 +1,159 @@
+body{
+margin:0px;
+}
+
+#animation{
+width:100%;
+height:100vh;
+overflow:hidden;
+}
+
+#sky{
+width:100%;
+height:100vh;
+position:absolute;
+top:0px;
+left:0px;
+background-color:#84c7fd;
+z-index:1;
+
+-webkit-animation:sky-changes 20s linear 1s;
+animation:sky-changes 20s linear 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+#grass{
+width:100%;
+height:35px;
+position:absolute;
+bottom:0px;
+left:0px;
+background-color:#2cc32c;
+z-index:2;
+
+-webkit-animation:grass-disappear 5s linear 1s;
+animation:grass-disappear 5s linear 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+.cloud{
+height:100px;
+position:absolute;
+z-index:2;
+
+-webkit-animation:clouds-float 7s linear 1s;
+animation:clouds-float 7s linear 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+#cloud1{
+width:220px;
+top:350px;
+left:950px;
+}
+
+#cloud2{
+width:180px;
+top:260px;
+left:280px;
+}
+
+#cloud3{
+width:150px;
+top:300px;
+left:-100px;
+}
+
+#spaceship{
+z-index:3;
+height:110px;
+width:90px;
+position:absolute;
+bottom:19px;
+left:49%;
+
+
+-webkit-animation:spaceship-launch 20s linear 1s;
+animation:spaceship-launch 20s linear 1s;
+-webkit-animation-fill-mode: forwards;
+animation-fill-mode:forwards;
+}
+
+#rocket{
+height:90px;
+position:absolute;
+bottom:15px;
+left:-40px;
+z-index:4;
+
+}
+
+#flame1{
+height:58px;
+position:absolute;
+bottom:-8px;
+left:-1.6px;
+z-index:4;
+
+-webkit-animation:flame1 4s linear 1s infinite;
+animation:flame1 4s linear 1s infinite;
+-webkit-animation-fill-mode: forwards;
+animation-fill-mode:forwards;
+}
+
+#flame2{
+height:50px;
+position:absolute;
+bottom:-2px;
+left:5.6px;
+z-index:4;
+
+-webkit-animation:flame2 4s linear 1s infinite;
+animation:flame2 4s linear 1s infinite;
+-webkit-animation-fill-mode: forwards;
+animation-fill-mode:forwards;
+}
+
+
+/*  KEY FRAMES  */
+
+@keyframes grass-disappear{
+0%{bottom:0px;}
+100%{bottom:-35px;}
+}
+
+
+@keyframes clouds-float{
+0%{transform:translate(0px ,0px);
+    opacity:1;}
+70%{opacity:0.6;}
+100%{transform:translate(175px ,300px);
+       opacity:0;}
+}
+
+
+@keyframes sky-changes{
+0%{background-color:#84c7fd;}
+60%{background-color:#1b6aa9;}
+100%{background-color:#1e4869;}
+}
+
+@keyframes spaceship-launch{
+0%{bottom:19px;}
+100%{bottom:360px;}
+}
+
+@keyframes flame1{
+0%{opacity:0;}
+50%{opacity:0.8;}
+100%{opacity:0;}
+}
+
+@keyframes flame2{
+0%{opacity:0.8;}
+50%{opacity:0;}
+100%{opacity:0.8;}
+}
